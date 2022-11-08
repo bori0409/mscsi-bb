@@ -5,8 +5,8 @@
     size="m"
     type="button"
     appearance="flat"
-  [ngClass]="{onTab : path === '/fridge', notOnTab : path !== '/fridge'}"
-    [routerLink]="'fridge'"
+  [ngClass]="{onTab : path === '/dashboard/(dashboardRouter:fridge)', notOnTab : path !== '/dashboard/(dashboardRouter:fridge)'}"
+[routerLink]="[{ outlets: { dashboardRouter: ['fridge'] } }]"
 >
     Fridge
 </button>	
@@ -15,8 +15,8 @@ tuiButton
 size="m"
 type="button"
 appearance="flat"
-[ngClass]="{onTab : path === '/groceries', notOnTab : path !== '/groceries'}"
-    [routerLink]="'groceries'"
+[ngClass]="{onTab : path === '/dashboard/(dashboardRouter:groceries)', notOnTab : path !== '/dashboard/(dashboardRouter:groceries)'}"
+    [routerLink]="[{ outlets: { dashboardRouter: ['groceries'] } }]"
 >
 Groceries
 </button>	
@@ -25,8 +25,8 @@ tuiButton
 size="m"
 type="button"
 appearance="flat"
-[ngClass]="{onTab : path === '/meals', notOnTab : path !== '/meals'}"
-    [routerLink]="'meals'"
+[ngClass]="{onTab : path === '/dashboard/(dashboardRouter:meals)', notOnTab : path !== '/dashboard/(dashboardRouter:meals)'}"
+    [routerLink]="[{ outlets: { dashboardRouter: ['meals'] } }]"
 >
 Meals
 </button>

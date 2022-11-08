@@ -24,6 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FridgeContentComponent } from './components/fridge-content/fridge-content.component';
 import { GroceriesContentComponent } from './components/groceries-content/groceries-content.component';
 import { MealsContentComponent } from './components/meals-content/meals-content.component';
+import { AuthGuard } from "./shared/guard/auth.guard";
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,7 @@ import { MealsContentComponent } from './components/meals-content/meals-content.
       TuiInputPasswordModule,
       TuiTabsModule
 ],
-  providers: [AuthService],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

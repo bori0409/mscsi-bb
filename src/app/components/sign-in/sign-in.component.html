@@ -51,9 +51,10 @@
   type="button"
   appearance="primary"
   class="tui-space_right-3 tui-space_bottom-3"
-  (click)="authService.SignIn(userEmail.value, userPassword.value)"
+  (click)="LogIn(userEmail.value,userPassword.value)"
+  [showLoader]="loader"
 >
-  primary
+  Log in
 </button>
 </div>
 </tui-root>

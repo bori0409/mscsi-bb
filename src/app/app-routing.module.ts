@@ -6,12 +6,23 @@ import { FridgeContentComponent } from './components/fridge-content/fridge-conte
 import { GroceriesContentComponent } from './components/groceries-content/groceries-content.component';
 import { MealsContentComponent } from './components/meals-content/meals-content.component';
 
+import { AuthGuard } from './shared/guard/auth.guard';
+
 const routes: Routes = [ { path: '', redirectTo: '/sign-in', pathMatch: 'full' }, 
-{ path: 'sign-in', component: SignInComponent },
-{ path: 'dashboard', component: DashboardComponent },
-{ path: 'fridge', component: FridgeContentComponent },
-{ path: 'groceries', component: GroceriesContentComponent },
-{ path: 'meals', component: MealsContentComponent }];
+{ path: 'sign-in', component: SignInComponent, },
+{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children:[
+  {
+    path:'fridge', component: FridgeContentComponent, outlet: 'dashboardRouter'
+  },{
+    path:'groceries', component: GroceriesContentComponent, outlet: 'dashboardRouter'
+  },{
+    path:'meals', component: MealsContentComponent, outlet: 'dashboardRouter'
+  },
+] },
+//{ path: 'fridge', component: FridgeContentComponent , canActivate: [AuthGuard],outlet: 'dashboardRouter' },
+//{ path: 'groceries', component: GroceriesContentComponent , canActivate: [AuthGuard] },
+//{ path: 'meals', component: MealsContentComponent, canActivate: [AuthGuard]  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

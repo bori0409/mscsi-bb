@@ -24,6 +24,7 @@ path ="";
     (event: NavigationEvent) => {
       if(event instanceof NavigationStart){
         this.path=event.url;
+        console.log(this.path)
       }
     })
   }
@@ -34,4 +35,5 @@ path ="";
   onClick(item: string): void {
     this.alertService.open(item).subscribe();
 }
+
 }
