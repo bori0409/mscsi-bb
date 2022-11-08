@@ -1,0 +1,7 @@
+.onTab{
+    background-color:white;
+    accent-color: darkgray;
+}
+.notOnTab{
+    background-color: transparent;
+}

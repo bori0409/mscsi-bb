@@ -1,0 +1,33 @@
+<div class="navBarContainer">
+
+    <button
+    tuiButton
+    size="m"
+    type="button"
+    appearance="flat"
+  [ngClass]="{onTab : path === '/fridge', notOnTab : path !== '/fridge'}"
+    [routerLink]="'fridge'"
+>
+    Fridge
+</button>	
+<button
+tuiButton
+size="m"
+type="button"
+appearance="flat"
+[ngClass]="{onTab : path === '/groceries', notOnTab : path !== '/groceries'}"
+    [routerLink]="'groceries'"
+>
+Groceries
+</button>	
+<button
+tuiButton
+size="m"
+type="button"
+appearance="flat"
+[ngClass]="{onTab : path === '/meals', notOnTab : path !== '/meals'}"
+    [routerLink]="'meals'"
+>
+Meals
+</button>
+</div>
