@@ -45,8 +45,9 @@ export class AuthService {
       })
       .catch((error) => {
         window.alert(error.message);
+        
       });
-  }
+    }
   // Sign up with email/password
   SignUp(email: string, password: string) {
     return this.afAuth
@@ -83,8 +84,11 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
+    return user !== null ? true : false;
   }
+  // Returns true when user is looged in and email is verified
+
+
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
