@@ -2,9 +2,10 @@
   command="ng build"
   publish="dist/angular-quickstart"
   
-  firebaseConfig = "aaa"
-
-
+ 
+[context..environment] 
+ firebaseConfig = "aaa"
+ 
 [[redirects]]
   from = "/*"
   to = "/index.html"
