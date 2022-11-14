@@ -3,9 +3,9 @@
   publish="dist/angular-quickstart"
   
  
-[context..environment] 
+[context.environment] 
  firebaseConfig = "aaa"
- 
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
