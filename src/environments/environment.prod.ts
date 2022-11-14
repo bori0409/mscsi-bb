@@ -1,8 +1,10 @@
+import { env } from "process";
+
 export const environment = {
   production: true,
   firebaseConfig:{
     
-      apiKey: "AIzaSyCGEoJURKc7mhW7M-iPwSWlvWhlofB7Pcg",
+      apiKey: process.env["firebaseConfigs"],
       authDomain: "fridge-app-cool.firebaseapp.com",
       projectId: "fridge-app-cool",
       storageBucket: "fridge-app-cool.appspot.com",

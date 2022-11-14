@@ -4,8 +4,8 @@
   
  
 [context.environment] 
- firebaseConfig = "aaa"
-
+ firebaseConfigs = "aaa"
+ 
 [[redirects]]
   from = "/*"
   to = "/index.html"
