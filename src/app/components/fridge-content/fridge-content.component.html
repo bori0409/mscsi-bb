@@ -8,15 +8,17 @@ class="card"
     </p>
     <tui-badged-content 
     class="bage"
+   
      *ngFor="let singleProduct of products; let i = index"
-    [contentTop]=""
-
+    [contentTop]="singleProduct.productQuantity"
+   
+    
 >
     <button
         tuiButton
         type="button"
         appearance="secondary"
-        size="xl"
+        size="s"
         
     >
        {{singleProduct.productName}}
@@ -42,8 +44,7 @@ class="card"
         tuiButton
         type="button"
         appearance="secondary"
-        size="xl"
-        
+         size="s"   
     >
        {{singleProduct.productName}}
     </button>
