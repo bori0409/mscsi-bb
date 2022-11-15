@@ -1,1 +1,31 @@
-<p>fridge-content works!</p>
+<tui-island textAlign="center">
+    <h3 class="tui-island__title">Fridge</h3>
+    <p class="tui-island__paragraph"></p>
+    <p class="tui-island__paragraph tui-island__paragraph_link">
+        
+    </p>
+    <tui-badged-content  *ngFor="let singleProduct of products; let i = index"
+    [contentTop]=""
+
+>
+    <button
+        tuiButton
+        type="button"
+        appearance="secondary"
+        size="xl"
+        
+    >
+       {{singleProduct.productName}}
+    </button>
+</tui-badged-content>
+</tui-island>
+
+   
+
+    
+
+
+
+
+
+ 
