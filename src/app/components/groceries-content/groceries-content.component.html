@@ -1,1 +1,12 @@
 <p>groceries-content works!</p>
+<h4>Tutorials List</h4>
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let tutorial of products; let i = index"
+    
+   
+  >
+    {{ tutorial.defaultProductName }}
+  </li>
+</ul>

@@ -25,6 +25,9 @@ import { FridgeContentComponent } from './components/fridge-content/fridge-conte
 import { GroceriesContentComponent } from './components/groceries-content/groceries-content.component';
 import { MealsContentComponent } from './components/meals-content/meals-content.component';
 import { AuthGuard } from "./shared/guard/auth.guard";
+import {TuiBadgedContentModule} from '@taiga-ui/kit';
+import {TuiIslandModule} from '@taiga-ui/kit';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,9 @@ import { AuthGuard } from "./shared/guard/auth.guard";
       TuiAlertModule,
       TuiInputModule,
       TuiInputPasswordModule,
-      TuiTabsModule
+      TuiTabsModule,
+      TuiBadgedContentModule,
+      TuiIslandModule
 ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
