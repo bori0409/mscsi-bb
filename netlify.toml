@@ -3,9 +3,6 @@
   publish="dist/angular-quickstart"
   
  
-[context.environment] 
- firebaseConfig.apiKey = "SECRET"
- 
 [[redirects]]
   from = "/*"
   to = "/index.html"

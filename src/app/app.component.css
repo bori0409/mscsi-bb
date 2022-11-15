@@ -33,3 +33,6 @@ footer {
 footer img {
     width: 20px;
 }
+.content{
+  max-width: 1000px;
+}
