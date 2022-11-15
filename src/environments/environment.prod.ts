@@ -4,7 +4,7 @@ export const environment = {
   production: true,
   firebaseConfig:{
     
-      apiKey: "fireba",
+      apiKey: "AIzaSyCGEoJURKc7mhW7M-iPwSWlvWhlofB7Pcg",
       authDomain: "fridge-app-cool.firebaseapp.com",
       projectId: "fridge-app-cool",
       storageBucket: "fridge-app-cool.appspot.com",
