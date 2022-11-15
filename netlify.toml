@@ -1,8 +1,8 @@
-[build]
+
+    [build]
   command="ng build"
   publish="dist/angular-quickstart"
-  
- 
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

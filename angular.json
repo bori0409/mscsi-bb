@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/app/styles.less"," src/demo-styling.css"
+              "src/app/styles.less","src/demo-styling.css"
             ],
             "scripts": []
           },
