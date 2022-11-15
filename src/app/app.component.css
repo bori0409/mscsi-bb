@@ -34,5 +34,6 @@ footer img {
     width: 20px;
 }
 .content{
-  max-width: 1000px;
+  align-self: center;
+  max-width: 1500px;
 }

@@ -1,0 +1,16 @@
+.headerCont{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 8px;
+}
+.avatarAndNameCont{
+      display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 8px;
+
+}
+.greeting{
+    padding-left: 8px;
+}
