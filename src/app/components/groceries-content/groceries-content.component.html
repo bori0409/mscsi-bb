@@ -1,12 +1,54 @@
-<p>groceries-content works!</p>
-<h4>Tutorials List</h4>
-<ul class="list-group">
-  <li
-    class="list-group-item"
-    *ngFor="let tutorial of products; let i = index"
-    
+
+<tui-island
+class="card"
+ textAlign="left">
+    <h3 class="tui-island__title">Fridge</h3>
+    <p class="tui-island__paragraph"></p>
+    <p class="tui-island__paragraph tui-island__paragraph_link">
+        
+    </p>
+    <tui-badged-content 
+    class="bage"
    
-  >
-    {{ tutorial.defaultProductName }}
-  </li>
-</ul>
+     *ngFor="let product of products; let i = index"
+    [contentTop]="product.defaultProductName"
+   
+    
+>
+    <button
+        tuiButton
+        type="button"
+        appearance="secondary"
+        size="s"
+        
+    >
+       {{product.defaultProductName}}
+    </button>
+</tui-badged-content>
+</tui-island>
+
+<tui-island
+class="card"
+ textAlign="left">
+    <h3 class="tui-island__title">Freezer</h3>
+    <p class="tui-island__paragraph"></p>
+    <p class="tui-island__paragraph tui-island__paragraph_link">
+        
+    </p>
+    <tui-badged-content 
+    class="bage"
+     *ngFor="let product of products; let i = index"
+    [contentTop]=""
+
+>
+    <button
+        tuiButton
+        type="button"
+        appearance="secondary"
+         size="s"   
+    >
+       {{product.defaultProductName}}
+    </button>
+</tui-badged-content>
+</tui-island>
+   

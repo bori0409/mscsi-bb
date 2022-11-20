@@ -23,13 +23,17 @@ export class FirebaseCloudStorageService {
   constructor( private db: AngularFirestore) {
     this.userProducts = db.collection(this.dbPath + this.user.uid+this.dbPath2);
   this.defaultProductsList = db.collection('/defaultProductList')
+  
   }
 getDefaultList(): AngularFirestoreCollection<DefaultProducts> {
   return this.defaultProductsList;
 }
 
   getAll(): AngularFirestoreCollection<Products> {
+    console.log(this.user);
+    
     return this.userProducts;
+    
   }
   create(tutorial: Products): any {
     return this.userProducts.add({ ...tutorial });

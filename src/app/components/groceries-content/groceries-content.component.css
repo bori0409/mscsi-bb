@@ -1,0 +1,14 @@
+.container {
+    max-width: 100.5rem;
+}
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+.bage{
+    margin: 8px;
+   
+}
+.card{
+    margin: 16px;
+}
+.red{
+    background-color: red;
+}
