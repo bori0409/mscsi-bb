@@ -1,10 +1,10 @@
 export class DefaultProducts {
   
-        defaultProductId?:string;
+      id?:string;
         defaultProductName?:string;
         defaultProductExpPeriod?:number;
         defaultProductAddedOn?: Date;
-        defaultProductQuantity?:number;
+        defaultProductQuantity:number=0;
     
     
 }

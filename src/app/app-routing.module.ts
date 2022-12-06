@@ -14,6 +14,9 @@ const routes: Routes = [ { path: '', redirectTo: '/sign-in', pathMatch: 'full' }
 { path: 'sign-up', component: SignUpComponent, },
 { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children:[
   {
+    path:'', component: FridgeContentComponent,outlet:'dashboardRouter'
+  },
+  {
     path:'fridge', component: FridgeContentComponent, outlet: 'dashboardRouter'
   },{
     path:'groceries', component: GroceriesContentComponent, outlet: 'dashboardRouter'

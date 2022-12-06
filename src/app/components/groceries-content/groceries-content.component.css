@@ -1,0 +1,56 @@
+.container {
+    max-width: 100.5rem;
+}
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+.bage{
+    margin: 8px;
+   
+}
+.card{
+    margin: 16px;
+}
+.red{
+    background-color: red;
+}
+.additionalButtonsCont{
+    display: flex;
+    flex-direction: row;
+}
+.singleItem{
+    display: flex;
+    flex-direction: row;
+   padding: 2px;
+   border-radius: 15px;
+    background-color: #b5d8fd;
+}
+.shopingCard{
+    margin: 16px;
+    
+    
+position: fixed;
+
+   
+    
+   
+    
+    bottom: 0;
+}
+.itemHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+}
+.addButton{
+   
+    display: block;
+    width: 100%;
+}
+.operatorContainer{
+    margin-left: 4px;
+}

@@ -7,12 +7,14 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { FirebaseCloudStorageService } from './firebase-cloud-storage.service';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   userData: any; // Save logged in user data
   constructor(
+    public fire:FirebaseCloudStorageService,
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
@@ -56,7 +58,11 @@ export class AuthService {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
        //this.SendVerificationMail();
-        this.SetUserData(result.user);
+        this.SetUserData(result.user).then(()=>{
+          this.router.navigate(['dashboard/']);
+        }).then(
+          ()=>this.fire.newUserCollection(result.user.uid)
+        );
       
       })
       .catch((error) => {

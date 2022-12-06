@@ -8,3 +8,10 @@
     margin-top: 50px; 
     padding: 10px;
 }
+.signInCont{
+    padding: 1%;
+}
+.logInBttn{
+    margin-top: 8px;
+    padding: auto;
+}

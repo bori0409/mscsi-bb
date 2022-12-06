@@ -1,0 +1,30 @@
+
+
+
+  <div class="container">
+   
+ 
+    <button tuiButton type="button" appearance="primary" size="s" (click)="shoppingCartService.getProduct(defaultProduct)?undefined:shoppingCartService.addProduct(defaultProduct)" >
+
+
+      {{defaultProduct.productName}}
+
+
+    </button>
+
+
+    <div class="operatorContainer" *ngIf="shoppingCartService.getProduct(defaultProduct).productQuantity">
+
+
+      <button tuiIconButton type="button" size="s" appearance="primary" icon="tuiIconPlus"
+      (click)="shoppingCartService.addProduct(defaultProduct)"></button>
+        <button tuiIconButton size="s" appearance="flat"> {{shoppingCartService.getProduct(defaultProduct).productQuantity}}</button>
+        <button tuiIconButton type="button" size="s" appearance="secondary-destructive" icon="tuiIconMinus"
+        (click)="shoppingCartService.substractProduct(defaultProduct)"></button>
+
+
+        
+    </div>
+  
+
+    
