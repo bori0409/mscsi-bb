@@ -1,54 +1,59 @@
+<tui-island class="card" textAlign="left">
+  <h3 class="tui-island__title">Fridge</h3>
+  <p class="tui-island__paragraph"></p>
+  <p class="tui-island__paragraph tui-island__paragraph_link">
 
-<tui-island
-class="card"
- textAlign="left">
-    <h3 class="tui-island__title">Fridge</h3>
-    <p class="tui-island__paragraph"></p>
-    <p class="tui-island__paragraph tui-island__paragraph_link">
-        
-    </p>
-    <tui-badged-content 
-    class="bage"
-   
-     *ngFor="let product of products; let i = index"
-    [contentTop]="product.defaultProductName"
-   
-    
->
-    <button
-        tuiButton
-        type="button"
-        appearance="secondary"
-        size="s"
-        
-    >
-       {{product.defaultProductName}}
+  </p>
+  <tui-badged-content class="bage" *ngFor="let product of products; let i = index">
+
+    <button tuiButton type="button" appearance="secondary" size="s" (click)="shoppingCartService.addProduct(product)">
+
+
+      {{product.productName}}
+
+
     </button>
-</tui-badged-content>
+
+
+  </tui-badged-content>
+
+
 </tui-island>
 
-<tui-island
-class="card"
- textAlign="left">
-    <h3 class="tui-island__title">Freezer</h3>
-    <p class="tui-island__paragraph"></p>
-    <p class="tui-island__paragraph tui-island__paragraph_link">
-        
-    </p>
-    <tui-badged-content 
-    class="bage"
-     *ngFor="let product of products; let i = index"
-    [contentTop]=""
+<tui-island class="card" *ngIf="shoppingCartService.products.length" class="shopingCard" textAlign="left">
+  <h3 class="tui-island__title">Shopping cart</h3>
+  <p class="tui-island__paragraph"></p>
+  <p class="tui-island__paragraph tui-island__paragraph_link">
 
->
-    <button
-        tuiButton
-        type="button"
-        appearance="secondary"
-         size="s"   
-    >
-       {{product.defaultProductName}}
+
+
+
+
+
+    <button class="bage" *ngFor="let product of shoppingCartService.products; let i = index" tuiButton type="button" appearance="secondary" size="s">
+
+
+      {{product.productName}}
+
+      <div class="operatorContainer">
+
+
+        <button tuiIconButton type="button" size="s" appearance="flat" icon="tuiIconPlus"
+          (click)="shoppingCartService.addProduct(product)"></button>
+        <button tuiIconButton size="s" appearance="flat">
+          {{shoppingCartService.getProduct(product).productQuantity}}</button>
+        <button tuiIconButton type="button" size="s" appearance="flat" icon="tuiIconMinus"
+          (click)="shoppingCartService.substractProduct(product)"></button>
+  
+  
+  
+      </div>
     </button>
-</tui-badged-content>
-</tui-island>
+
+
    
+
+
+<button tuiButton size="s" class="addButton" (click)="showNotification()" > Add products to the fridge</button>
+
+</tui-island>

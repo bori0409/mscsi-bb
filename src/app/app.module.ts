@@ -29,6 +29,8 @@ import {TuiBadgedContentModule} from '@taiga-ui/kit';
 import {TuiIslandModule} from '@taiga-ui/kit';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {TuiAvatarModule} from '@taiga-ui/kit';
+import { ProductBadgeComponent } from './components/product-badge/product-badge.component';
+import { DefaultProductBadgeComponent } from './components/default-product-badge/default-product-badge.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import {TuiAvatarModule} from '@taiga-ui/kit';
     GroceriesContentComponent,
     MealsContentComponent,
     SignUpComponent,
+    ProductBadgeComponent,
+    DefaultProductBadgeComponent,
    
   ],
   imports: [TuiButtonModule,
@@ -61,7 +65,8 @@ import {TuiAvatarModule} from '@taiga-ui/kit';
       TuiTabsModule,
       TuiBadgedContentModule,
       TuiIslandModule,
-      TuiAvatarModule
+      TuiAvatarModule,
+      TuiAlertModule
 ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

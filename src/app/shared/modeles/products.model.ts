@@ -1,5 +1,5 @@
-export class Products {
-    productId?:string;
+export class Product {
+    id?:string;
     productName?:string;
     productExpPeriod?:number;
     productAddedOn?: Date;
