@@ -92,26 +92,22 @@ sendShoppingCart(){
 
 
 
-  this.products.forEach(product => { 
-//check if product is already in the fridge
-
-//check if the current product is already in the fridge
-const productInTheFridgelp=this.productsInTheFridge.filter(x=>x.productName==product.productName && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate());
-console.log(new Date(product.productAddedOn).getDate());
-console.log(productInTheFridgelp);
-console.log(this.productsInTheFridge);
-
-
-
-
+  this.products.filter(product => { 
 //check if product is already in the fridge
 
 
+//check if the date is the same ignowing the time
+// const productInTheFridge=this.productsInTheFridge.filter(x=>x.productName==product.productName && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate());
+////
 
-
-    const productInTheFridge=this.productsInTheFridge.filter(x=>x.productName==product.productName && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate()); 
+    const productInTheFridge=this.productsInTheFridge.filter(x=>x.productName==product.productName); 
+    // && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate()
     console.log(new Date(product.productAddedOn).getDate());
-    console.log(productInTheFridge);
+console.log(productInTheFridge, "productInTheFridge");
+
+    
+    console.log(new Date(product.productAddedOn).getDate());
+    console.log(productInTheFridge, "productInTheFridge");
     console.log(this.productsInTheFridge);
     
     
