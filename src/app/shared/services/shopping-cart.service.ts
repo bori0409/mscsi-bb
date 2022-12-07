@@ -86,30 +86,10 @@ export class ShoppingCartService {
   }
 sendShoppingCart(){
   this.productsSend=true;
-  //firebase.firestore().collection('shoppingCart').add(this.products);
-  //send shoppingcard to firebase
-  //firebase.firestore().collection('shoppingCart').add(this.products);
-
-
-
   this.products.filter(product => { 
-//check if product is already in the fridge
-
-
-//check if the date is the same ignowing the time
-// const productInTheFridge=this.productsInTheFridge.filter(x=>x.productName==product.productName && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate());
-////
-
     const productInTheFridge=this.productsInTheFridge.filter(x=>x.productName==product.productName); 
     // && new Date(x.productAddedOn).getDate()== new Date(product.productAddedOn).getDate()
-    console.log(new Date(product.productAddedOn).getDate());
-console.log(productInTheFridge, "productInTheFridge");
 
-    
-    console.log(new Date(product.productAddedOn).getDate());
-    console.log(productInTheFridge, "productInTheFridge");
-    console.log(this.productsInTheFridge);
-    
     
     if (productInTheFridge.length>0){
       console.log("IF TRIGGERED");
@@ -119,6 +99,8 @@ console.log(productInTheFridge, "productInTheFridge");
     }
     else{
       console.log("ELSE TRIGGERED");
+      console.log(product.productQuantity, "this is the shopping cart product quantity function");
+      
       this.FirebaseCloudStorageService.create(product);
     }
   });

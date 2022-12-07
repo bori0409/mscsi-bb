@@ -48,28 +48,22 @@ newUserCollection(userId:string){
     return this.userProducts;
     
   }
-  create(shoppingCart: Product): any {
+  create(productToBeAdded: Product): any {
 
-//add a new product to the database
+const customId = "id" + Math.round((new Date()).getTime() / 1000).toString() + productToBeAdded.productName.slice(0, 3);
 
- 
-
-
-
-
-
-//tjhdtjhtjrt
-
-const customId = "id" + Math.round((new Date()).getTime() / 1000).toString() + shoppingCart.productName.slice(0, 3);
+console.log(productToBeAdded.productQuantity,"this is in the service in the create function");
     return this.userProducts.doc(customId).set({ 
-      id: "id" + Math.round((new Date()).getTime() / 1000).toString() + shoppingCart.productName.slice(0, 3),
-      productName:shoppingCart.productName,
-      productQuantity:shoppingCart.productQuantity,
+      id: "id" + Math.round((new Date()).getTime() / 1000).toString() + productToBeAdded.productName.slice(0, 3),
+      productName:productToBeAdded.productName,
+      productQuantity:productToBeAdded.productQuantity,
       productAddedOn:new Date(Date.now()),
-      productExpPeriod:shoppingCart.productExpPeriod,
+      productExpPeriod:productToBeAdded.productExpPeriod,
+      
       
 
     });
+    
   }
 
   update(id: string, data: any): Promise<void> {
