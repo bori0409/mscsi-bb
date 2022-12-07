@@ -49,7 +49,19 @@ newUserCollection(userId:string){
     
   }
   create(shoppingCart: Product): any {
-    return this.userProducts.add({ 
+
+//add a new product to the database
+
+ 
+
+
+
+
+
+//tjhdtjhtjrt
+
+const customId = "id" + Math.round((new Date()).getTime() / 1000).toString() + shoppingCart.productName.slice(0, 3);
+    return this.userProducts.doc(customId).set({ 
       id: "id" + Math.round((new Date()).getTime() / 1000).toString() + shoppingCart.productName.slice(0, 3),
       productName:shoppingCart.productName,
       productQuantity:1,
@@ -61,6 +73,7 @@ newUserCollection(userId:string){
   }
 
   update(id: string, data: any): Promise<void> {
+    console.log(id, data);
     return this.userProducts.doc(id).update(data);
   }
 
