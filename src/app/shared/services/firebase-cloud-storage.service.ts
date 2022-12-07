@@ -17,15 +17,20 @@ export class FirebaseCloudStorageService {
   private dbPath = '/usersProducts/'
   //private dbPath = '/usersProducts/myNewUser/userProducts'
   private dbPath2 = '/userProducts'
-  private user = JSON.parse(localStorage.getItem('user')!)
+  private user;
 
   userProducts: AngularFirestoreCollection<Product>;
   defaultProductsList: AngularFirestoreCollection<Product>;
 
   constructor( private db: AngularFirestore, ) {
-    this.userProducts = db.collection(this.dbPath + this.user.uid+this.dbPath2);
+    
   this.defaultProductsList = db.collection('/Product')
   
+  }
+  getUserId(){
+    this.user = JSON.parse(localStorage.getItem('user')!);
+    
+    this.userProducts = this.db.collection(this.dbPath + this.user.uid+this.dbPath2);
   }
 getDefaultList(): AngularFirestoreCollection<Product> {
   return this.defaultProductsList;
@@ -37,6 +42,7 @@ newUserCollection(userId:string){
 }
 
   getAll(): AngularFirestoreCollection<Product> {
+    this.getUserId();
     console.log(this.user);
     
     return this.userProducts;
