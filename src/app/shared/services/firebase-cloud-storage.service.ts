@@ -64,7 +64,7 @@ const customId = "id" + Math.round((new Date()).getTime() / 1000).toString() + s
     return this.userProducts.doc(customId).set({ 
       id: "id" + Math.round((new Date()).getTime() / 1000).toString() + shoppingCart.productName.slice(0, 3),
       productName:shoppingCart.productName,
-      productQuantity:1,
+      productQuantity:shoppingCart.productQuantity,
       productAddedOn:new Date(Date.now()),
       productExpPeriod:shoppingCart.productExpPeriod,
       
