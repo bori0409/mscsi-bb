@@ -1,0 +1,30 @@
+.next{
+    background-color:#FFFCD6;
+    height: 40vh;
+    transform: rotate(180deg);
+    border-radius:  10px 10px 30px 30px;
+}
+.current{
+    height: 40vh;
+    background-color:#CCDDD3;
+    border-radius:  10px 10px 30px 30px;
+    
+ 
+}
+.currentContent{
+    text-align: center;
+}
+.ContentHolder{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}

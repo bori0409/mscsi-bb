@@ -9,6 +9,9 @@ import { MealsContentComponent } from './components/meals-content/meals-content.
 import { AuthGuard } from './shared/guard/auth.guard';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { Try1Component } from './components/try1/try1.component';
+import { StartScreenComponent } from './components/start-screen/start-screen.component';
+import { GameScreenComponent } from './components/game-screen/game-screen.component';
+import { EndScreenComponent } from './components/end-screen/end-screen.component';
 
 const routes: Routes = [ { path: '', redirectTo: '/sign-in', pathMatch: 'full' }, 
 { path: 'sign-in', component: SignInComponent, },
@@ -26,6 +29,12 @@ const routes: Routes = [ { path: '', redirectTo: '/sign-in', pathMatch: 'full' }
     path:'groceries', component: GroceriesContentComponent, outlet: 'dashboardRouter'
   },{
     path:'meals', component: MealsContentComponent, outlet: 'dashboardRouter'
+  },{
+    path:'start-game', component: StartScreenComponent,outlet:'dashboardRouter'
+  },{
+    path:'game', component: GameScreenComponent,outlet:'dashboardRouter'
+  },{
+    path:'end-game', component: EndScreenComponent,outlet:'dashboardRouter'
   },
 ] },
 //{ path: 'fridge', component: FridgeContentComponent , canActivate: [AuthGuard],outlet: 'dashboardRouter' },

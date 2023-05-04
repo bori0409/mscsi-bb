@@ -1,0 +1,44 @@
+<div class="tui-container tui-container_adaptive">
+    <div class="tui-row tui-row_adaptive">
+        <div class="header tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+<div class="box">
+<button
+            class="backBtn"
+            tuiIconButton
+            type="button"
+            appearance="flat"
+            icon="tuiIconChevronLeftLarge"
+            routerLink='/dashboard'
+            >
+        </button>
+            <p class="gameName tui-text_h6 ">Vibrate phone game replay</p>
+</div>
+            
+        </div>
+    </div>
+    <div class="tui-row tui-row_adaptive tui-space_vertical-8">
+        <div class="header tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+            <h2>Here is your replay 😉</h2>        
+          
+        </div>
+    </div>
+    <div class="tui-row tui-row_adaptive tui-space_vertical-10">
+        <div class="header box tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+            <h2>{{players[0].name}} created: </h2>  
+            <button  [disabled]="isPlaying"  (click)="playVibrationPattern(firstPlayerPatern)"   icon="tuiIconPlayLarge" tuiIconButton></button>      
+          
+        </div>
+    </div>
+    <div class="tui-row tui-row_adaptive tui-space_vertical-10">
+        <div class="header box tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+            <h2>{{players[1].name}} finished with: </h2>  
+            <button tuiIconButton [disabled]="isPlaying"  (click)="playVibrationPattern(lastPlayerPatern)"icon="tuiIconPlayLarge"> </button>      
+          
+        </div>
+    </div>
+    <div class=" header similar tui-row tui-row_adaptive tui-space_vertical-4">
+        <h3>Similarity score: </h3>
+        <tui-badge  status="primary"  size="l" value="{{simmilarityScore}}"></tui-badge>
+    </div>
+   
+</div>

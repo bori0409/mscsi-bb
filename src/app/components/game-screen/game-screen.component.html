@@ -1,0 +1,27 @@
+<div class="next">
+    <div *ngIf="playerIndex != 2">
+    <tui-avatar  class="tui-space_vertical-2"
+        text="{{players[playerIndex+1].name}}"
+        
+        ></tui-avatar>
+        <h3 >You are next, It is your turn, {{players[playerIndex+1].name}}</h3>
+        <div class="ContentHolder"  ><h3>Try to feel and remember the vibration pattrn.</h3></div>
+        </div>
+</div>
+<div class="current">
+    <div class="info tui-space_vertical-2">
+        
+            <tui-avatar class=""
+        text="{{players[playerIndex].name}}"
+        
+        ></tui-avatar>
+        <h3>It is your turn, {{players[playerIndex].name}} </h3>
+        
+      
+        <button [disabled]="!nextPlayersTurn" *ngIf="playerIndex != 2" size="xs" tuiButton (click)="nextLevel()">Next players turn</button>
+        <button [disabled]="!isGameOver"*ngIf="playerIndex == 2" size="xs" appearance="accent" tuiButton (click)="endGame()">End game</button>
+    </div>
+    <div class="ContentHolder"> <button class="currentContent" tuiIconButton   icon="tuiIconChevronUpLarge"  (touchstart)="onButtonPressStart()" [disabled]="isVibrationButtonDisabled" (touchend)="onButtonPressEnd()"></button>
+       <h3>Press the button to create a vibration pattern</h3> 
+    </div>
+   </div>

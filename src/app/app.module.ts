@@ -33,7 +33,11 @@ import { ProductBadgeComponent } from './components/product-badge/product-badge.
 import { DefaultProductBadgeComponent } from './components/default-product-badge/default-product-badge.component';
 import { Try1Component } from './components/try1/try1.component';
 import { VibrationService } from "./shared/vibration.service";
-
+import { StartScreenComponent } from './components/start-screen/start-screen.component';
+import { GameScreenComponent } from './components/game-screen/game-screen.component';
+import { EndScreenComponent } from './components/end-screen/end-screen.component';
+import {TuiBadgeModule} from '@taiga-ui/kit';
+//import {TuiPullToRefreshModule} from '@taiga-ui/addon-mobile';
 // import { Vibration } from '@ionic-native/vibration/ngx';
 // fix error with ngx vibration module 
 //  
@@ -52,6 +56,9 @@ import { VibrationService } from "./shared/vibration.service";
     ProductBadgeComponent,
     DefaultProductBadgeComponent,
     Try1Component,
+    StartScreenComponent,
+    GameScreenComponent,
+    EndScreenComponent,
    
   ],
   imports: [TuiButtonModule,
@@ -74,6 +81,7 @@ import { VibrationService } from "./shared/vibration.service";
       TuiIslandModule,
       TuiAvatarModule,
       TuiAlertModule,
+      TuiBadgeModule
       
       
 ],

@@ -1,0 +1,57 @@
+<div class="tui-container tui-container_adaptive">
+    <div class="tui-row tui-row_adaptive">
+        <div class="header tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+<div class="box">
+<button
+            class="backBtn"
+            tuiIconButton
+            type="button"
+            appearance="flat"
+            icon="tuiIconChevronLeftLarge"
+            routerLink='/dashboard'
+            >
+        </button>
+            <p class="gameName tui-text_h6 ">Vibrate phone</p>
+</div>
+            
+        </div>
+    </div>
+    <div class="tui-row tui-row_adaptive">
+        <div class="header tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+            <form
+            class="b-form"
+            [formGroup]="testForm"
+        >
+            <tui-input
+            class="tui-space_vertical-2" formControlName="testValue">
+                Name
+                <input
+                    tuiTextfield
+                    
+                />
+            </tui-input>
+            <tui-input  class="tui-space_vertical-2" formControlName="testValue2">
+                Name
+                <input
+                    tuiTextfield
+                    
+                />
+            </tui-input>
+            <tui-input  class="tui-space_vertical-2" formControlName="testValue3">
+                Name
+                <input
+                    tuiTextfield
+                    
+                />
+            </tui-input>
+        </form>
+        
+          
+        </div>
+    </div>
+    <div class="tui-row tui-row_adaptive">
+        <div class="header tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+            <button tuiButton class="startBtn" (click)="onStartBtnClick()" [showLoader]="loader">Start</button>
+        </div>
+    </div>
+</div>
