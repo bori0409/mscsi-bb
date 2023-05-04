@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { log } from 'console';
+import { VibrationService } from 'src/app/shared/vibration.service';
  declare const window: any;
 @Component({
   selector: 'app-try1',
@@ -8,10 +9,11 @@ import { log } from 'console';
 })
 export class Try1Component implements OnInit {
  
-  constructor() { }
+  constructor(private vibrationService: VibrationService) { }
 
   ngOnInit(): void {
   }
+  
   vibrate() {
     if ("vibrate" in navigator) {
       navigator.vibrate(500);
@@ -30,6 +32,9 @@ vibrate2() {
     console.log("Vibration not supported on this device");
   }
 }
-
+vibrate3() {
+  this.vibrationService.vibrate(1000); 
+  
+}
 
 }

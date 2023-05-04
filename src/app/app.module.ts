@@ -32,6 +32,11 @@ import {TuiAvatarModule} from '@taiga-ui/kit';
 import { ProductBadgeComponent } from './components/product-badge/product-badge.component';
 import { DefaultProductBadgeComponent } from './components/default-product-badge/default-product-badge.component';
 import { Try1Component } from './components/try1/try1.component';
+import { VibrationService } from "./shared/vibration.service";
+
+// import { Vibration } from '@ionic-native/vibration/ngx';
+// fix error with ngx vibration module 
+//  
 
 @NgModule({
   declarations: [
@@ -68,9 +73,11 @@ import { Try1Component } from './components/try1/try1.component';
       TuiBadgedContentModule,
       TuiIslandModule,
       TuiAvatarModule,
-      TuiAlertModule
+      TuiAlertModule,
+      
+      
 ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, VibrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
