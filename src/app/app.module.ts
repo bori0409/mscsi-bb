@@ -31,6 +31,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {TuiAvatarModule} from '@taiga-ui/kit';
 import { ProductBadgeComponent } from './components/product-badge/product-badge.component';
 import { DefaultProductBadgeComponent } from './components/default-product-badge/default-product-badge.component';
+import { Try1Component } from './components/try1/try1.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { DefaultProductBadgeComponent } from './components/default-product-badge
     SignUpComponent,
     ProductBadgeComponent,
     DefaultProductBadgeComponent,
+    Try1Component,
    
   ],
   imports: [TuiButtonModule,

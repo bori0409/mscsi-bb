@@ -8,13 +8,17 @@ import { MealsContentComponent } from './components/meals-content/meals-content.
 
 import { AuthGuard } from './shared/guard/auth.guard';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { Try1Component } from './components/try1/try1.component';
 
 const routes: Routes = [ { path: '', redirectTo: '/sign-in', pathMatch: 'full' }, 
 { path: 'sign-in', component: SignInComponent, },
 { path: 'sign-up', component: SignUpComponent, },
 { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children:[
   {
-    path:'', component: FridgeContentComponent,outlet:'dashboardRouter'
+    path:'', component: Try1Component,outlet:'dashboardRouter'
+  },
+  {
+    path:'try1', component: Try1Component,outlet:'dashboardRouter'
   },
   {
     path:'fridge', component: FridgeContentComponent, outlet: 'dashboardRouter'

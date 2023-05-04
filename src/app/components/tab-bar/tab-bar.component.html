@@ -30,4 +30,14 @@ appearance="flat"
 >
 Meals
 </button>
+<button
+tuiButton
+size="m"
+type="button"
+appearance="flat"
+[ngClass]="{onTab : path === '/dashboard/', notOnTab : path !== '/dashboard/'}"
+    [routerLink]="[{ outlets: { dashboardRouter: ['try1'] } }]"
+>
+Try1
+</button>
 </div>
